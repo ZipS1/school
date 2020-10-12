@@ -64,3 +64,8 @@ def elements(matrix):
             if m not in elements:
                 elements.append(m)
     return elements
+
+if __name__ == '__main__':
+	m = genMx(4, 3, 1, 9, 1)
+	print("\nDEMONSTRATION".center(5,"-"))
+	printMx(m)
