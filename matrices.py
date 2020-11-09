@@ -3,9 +3,7 @@ from random import randint as rand
 def printMx(matrix):
     print()
     print("MATRIX".center(len(matrix[0])*3, "-"))
-    for i in matrix:
-        print(i)
-    print()
+    print(*matrix, sep="\n", end="\n\n")
 
 def genMx(matrix_width, matrix_height, value_from, value_to, repeat_possible):
     if matrix_height == 0 or matrix_width == 0:
