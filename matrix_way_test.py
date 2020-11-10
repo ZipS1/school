@@ -1,4 +1,4 @@
-import matrices
+import matrices                                  #TODO: check if dest point in area
 
 HEIGHT = 5
 WIDTH = 4
@@ -7,28 +7,21 @@ matrices.printMx(matrix)
 
 while True:
     try:
-        start_point = input("Enter starting point (x y): ").split()
-        start_point = [int(i) - 1 for i in start_point]
-        start_x, start_y = start_point
+        points = input("Enter starting points (x1 y1 x2 y2): ").split()
+        points = [int(i) - 1 for i in points]
+        start_x, start_y, dest_x, dest_y = points
     except ValueError:
-        print("\nEnter coordinates as TWO NUMBERS x, y WITH SPACE between!\n")
+        raise
     else:
         break
-
-color = matrix[start_y][start_x]
-new_color = int(input("Enter your color (0-3): "))
-if color == new_color:
-    matrices.printMx(matrix)
 
 c_point = (start_y, start_x)
 
 area = [c_point]
 
-while area != []:
-    c_point = area[0]
+while True:
     y = c_point[0]
     x = c_point[1]
-    matrix[y][x] = new_color
 
     if x - 1 >= 0:
         if matrix[y][x - 1] == color:
@@ -44,4 +37,8 @@ while area != []:
             area.append((y + 1, x))
     area.remove(c_point)
 
-matrices.printMx(matrix)
+    if area == []:
+        matrices.printMx(matrix)
+        quit()
+    else:
+        c_point = area[0]
