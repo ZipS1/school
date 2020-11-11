@@ -16,17 +16,11 @@ new_color = int(input("Enter your color (0-3): "))  # input: int 0-3
 point = (start_y, start_x)
 area = [point]
 
-<<<<<<< HEAD
 while area != []:
-    y, x = area[0]
-=======
-area = [c_point]
+    point = area[0]
+    y = point[0]
+    x = point[1]
 
-while area != []:
-    c_point = area[0]
-    y = c_point[0]
-    x = c_point[1]
->>>>>>> 6355ccbbaea212f4513067f67ad867702c6ac0e8
     matrix[y][x] = new_color
 
     if x - 1 >= 0:
