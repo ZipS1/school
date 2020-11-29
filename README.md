@@ -1,1 +1,1 @@
-This is repository for my school progs
+This a is repository for my school progs
