@@ -2,8 +2,8 @@ import matrices
 
 HEIGHT = 5
 WIDTH = 4
-matrix = matrices.genMx(WIDTH, HEIGHT, 0, 3, True)
-matrices.printMx(matrix)
+matrix = matrices.gen_mx(WIDTH, HEIGHT, 0, 3, True)
+matrices.print_mx(matrix)
 
 # input: two nums x,y with space between
 startpoint = input("Enter starting point (x y): ").split()

@@ -2,8 +2,8 @@ import matrices
 
 HEIGHT = 5
 WIDTH = 4
-matrix = matrices.genMx(WIDTH, HEIGHT, 0, 1, True)
-matrices.printMx(matrix)
+matrix = matrices.gen_mx(WIDTH, HEIGHT, 0, 1, True)
+matrices.print_mx(matrix)
 
 color = 1
 
